@@ -13,8 +13,15 @@
             background-color: #f8f9fa;
             overflow-x: hidden;
         }
+        .navbar{
+            background-color: #000;
+        }
+        #header> p{
+            background-color: rgba(1, 1, 1, 0.7);
+            color: #fff;
+        }
         .custom-card {
-            width: 75%;
+            width: 80%;
             margin: 0 auto;
             margin-top: 30px;
         }
@@ -23,16 +30,14 @@
             display: flex;
             flex-direction: column;
             padding: 50px 0;
-        }
-        #summary, #education, #experience, #skills, #projects {
             justify-content: flex-start;
             text-align: left;
         }
         #skills {
             margin-top: 50px; 
         }
-        #overview {
-            background-image: url('images/background1.jpeg');
+        #header {
+            background-image: url('images/header.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -90,8 +95,8 @@
     <body data-spy="scroll" data-target="#navbar" data-offset="50">
 
         <nav id="navbar"
-            class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="#">Rachel Ring</a>
+            class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand font-weight-bold" href="#">Rachel Ring</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -121,23 +126,33 @@
             </div>
         </nav>
 
+        <div class="container-fluid m-0 p-0">
+            <section id="header" class="text-center d-flex align-items-center justify-content-center mx-auto p-2">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </section>
+        </div>
         <div class="custom-card">
             <div class="container">
-                <section id="overview" class="text-center py-10">
-                    <div class="rounded-circle overflow-hidden mx-auto my-3"
-                        style="width: auto; height: auto;">
-                        <img src="images/headshot.jpg" alt="Rachel Ring"
-                            class="w-100 h-100 img-fluid">
+                <section id="overview" class="py-10">
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="rounded-circle overflow-hidden mx-auto my-3"
+                                style="width: auto; height: auto; max-height: 600px; max-width: 450px;">
+                                <img src="images/headshot.jpg" alt="Rachel Ring"
+                                    class="w-100 h-100 img-fluid">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
                 </section>
                 <section id="summary" class="py-5">
-                    <h2>A little about me</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    <h2 class="mx-auto p-3">A little about me</h2>
                     <div id="carouselExampleIndicators" class="carousel slide mx-auto"
                         data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -202,11 +217,10 @@
 
                 </section>
                 <section id="education" class="py-5">
-                    <h2>Education</h2>
+                    <h2 class="mx-auto p-3">Education</h2>
                     <div class="accordion" id="educationAccordion">
-                        <!-- TUD Card (Default Open) -->
                         <div class="card">
-                            <div class="card-header" id="tudHeading">
+                            <div class="card-header text-center" id="tudHeading">
                                 <h2 class="mb-0">
                                     <button class="btn btn-link" type="button"
                                         data-toggle="collapse"
@@ -227,7 +241,7 @@
                                         Lorem ipsum dolor sit amet, consectetur
                                         adipiscing elit.
                                     </p>
-                                    <div class="card">
+                                    <div class="card border-0">
                                         <div class="card-header"
                                             id="educationTabs">
                                             <ul
@@ -262,8 +276,200 @@
                                         <div class="tab-content">
                                             <div class="tab-pane fade" id="y1">
                                                 <div class="card-body">
-                                                    <!-- Content for y1 tab -->
-                                                    <strong>University Name 1</strong>
+                                                    <p class="py-2">
+                                                        GPA: <strong>4.0</strong>
+                                                    </p>
+                                                    <div
+                                                        class="table-responsive">
+                                                        <table class="table table-borderless">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Module</th>
+                                                                    <th>Grade</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Business and Information Systems</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Computer Architecture</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Critical Skills Development</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Database Fundamentals</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Discrete Maths 1</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Object Oriented Systems Analysis</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Operating Systems Fundamentals</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Social Media Communications</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Software Development 1</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Software Development 2</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Statistics</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Visual Design and User Experience</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="y2">
+                                                <div class="card-body">
+                                                    <p class="py-2">
+                                                        GPA: <strong>3.92</strong>
+                                                    </p>
+                                                    <div
+                                                        class="table-responsive">
+                                                        <table
+                                                            class="table table-borderless">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Module</th>
+                                                                    <th>Grade</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Advanced Database Technologies</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Client-Side Web Development</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Database Admin and Analysis</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Discrete Mathematics 2</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Group Project</td>
+                                                                    <td>B</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Information Security</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Management Science</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Network Fundamentals</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Routing and Switching Essentials</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Software Development 3</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Software Development 4</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Software Quality Assurance and Testing</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="y3">
+                                                <div class="card-body">
+                                                    <p class="py-2">
+                                                        GPA: <strong>3.92</strong>
+                                                    </p>
+                                                    <div
+                                                        class="table-responsive">
+                                                        <table
+                                                            class="table table-borderless">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Module</th>
+                                                                    <th>Grade</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Advanced Database Technologies</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Cloud Services adn Distributed Computing</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Data Anaysis</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Data Structures and Algorithms</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Operating Systems</td>
+                                                                    <td>A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Server-side Web Development</td>
+                                                                    <td>B+</td>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td>Work Placement</td>
+                                                                    <td>Pass</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="tab-pane fade show active"
+                                                id="y4">
+                                                <div class="card-body">
+                                                    <!-- Content for y4 tab -->
+                                                    <strong>University Name 4</strong>
+                                                    - Degree in Subject 4 -
+                                                    Graduated in 20XX
                                                     <p>
                                                         Lorem ipsum dolor sit
                                                         amet, consectetur
@@ -334,47 +540,6 @@
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade" id="y2">
-                                                <div class="card-body">
-                                                    <!-- Content for y2 tab -->
-                                                    <strong>University Name 2</strong>
-                                                    - Degree in Subject 2 -
-                                                    Graduated in 20XX
-                                                    <p>
-                                                        Lorem ipsum dolor sit
-                                                        amet, consectetur
-                                                        adipiscing elit.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade" id="y3">
-                                                <div class="card-body">
-                                                    <!-- Content for y3 tab -->
-                                                    <strong>University Name 3</strong>
-                                                    - Degree in Subject 3 -
-                                                    Graduated in 20XX
-                                                    <p>
-                                                        Lorem ipsum dolor sit
-                                                        amet, consectetur
-                                                        adipiscing elit.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="tab-pane fade show active"
-                                                id="y4">
-                                                <div class="card-body">
-                                                    <!-- Content for y4 tab -->
-                                                    <strong>University Name 4</strong>
-                                                    - Degree in Subject 4 -
-                                                    Graduated in 20XX
-                                                    <p>
-                                                        Lorem ipsum dolor sit
-                                                        amet, consectetur
-                                                        adipiscing elit.
-                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -564,8 +729,8 @@
 
         <!-- Download CV Button -->
         <button id="downloadCVButton" class="btn btn-success"
-            onclick="window.location.href='https\:\/\/drive.google.com/file/d/1PCLOKeyn42Kf0JnhQz7T8zrMBrnpwpfu/view?usp=sharing'"
-            data-toggle="tooltip" data-placement="left" title="Download my CV">
+            onclick="window.open('https\:\/\/drive.google.com/file/d/1PCLOKeyn42Kf0JnhQz7T8zrMBrnpwpfu/view?usp=sharing', '_blank')"
+            data-toggle="tooltip" data-placement="left" title="Download my CV" >
             <i class="fas fa-download"></i>
         </button>
 
@@ -582,13 +747,11 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <!-- Modal Body -->
                     <div class="modal-body">
                         <!-- Form -->
                         <form id="contactForm"
                             action="https://formspree.io/f/xwkdgpaq"
                             method="post">
-                            <!-- Your form fields go here -->
                             <div class="form-group">
                                 <label for="name">Name:</label>
                                 <input type="text" class="form-control"
